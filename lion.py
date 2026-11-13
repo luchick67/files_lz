@@ -19,7 +19,7 @@ vsego_words = sum(nwords.values())  # Вычисляем общее количе
 df_words = pd.DataFrame(nwords.items(), columns=['Слово', 'Частота'])  # Создаем таблицу со словами и их частотой
 df_words['Процент'] = (df_words['Частота'] / vsego_words) * 100  # Вычисляем процентную долю каждого слова
 
-df_words.to_csv('sasa.csv', index=False, sep=';', encoding='utf-8-sig')  # Сохраняем таблицу в CSV в текущую папку
+df_words.to_csv('lion.csv', index=False, sep=';', encoding='utf-8-sig')  # Сохраняем таблицу в CSV в текущую папку
 
 letters = re.findall(r'[а-яА-ЯёЁ]', text.lower())  # Извлекаем все русские буквы в нижнем регистре
 nletters = Counter(letters)  # Считаем количество повторений каждой буквы
